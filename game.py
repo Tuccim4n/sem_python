@@ -18,7 +18,7 @@ for i in range(0, times):
     number_2 = randrange(10)
     operator = choice(operators)
 
-    if (operator == "/"):
+    if (operator == "/") and (number_2 == 0):
         number_2 = randrange(1, 10)
 
 # Se imprime la cuenta.
@@ -29,7 +29,7 @@ for i in range(0, times):
         case "+": boolean = (result == (number_1 + number_2))
         case "-": boolean = (result == (number_1 - number_2))
         case "*": boolean = (result == (number_1 * number_2))
-        case "/": boolean = (result == round((number_1 / number_2)), 2)
+        case "/": boolean = (result == round(number_1 / number_2, 2))
 
     if (boolean):
         correctas += 1
