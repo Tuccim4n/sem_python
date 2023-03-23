@@ -18,18 +18,18 @@ for i in range(0, times):
     number_2 = randrange(10)
     operator = choice(operators)
 
-    if (operator == "/") and (number_2 == 0):
+    if (operator == "/") and (number_2 == 0): # Verifico que no ocurra error por division por cero
         number_2 = randrange(1, 10)
 
 # Se imprime la cuenta.
     print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
 # Le pedimos al usuario el resultado
-    result = float(input("resultado: "))
+    result = float(input("resultado: ")) # Use float en vez de int para que tome todos los decimales al ingresar el resultado y que no trunque como si fuera un entero
     match operator:
         case "+": boolean = (result == (number_1 + number_2))
         case "-": boolean = (result == (number_1 - number_2))
         case "*": boolean = (result == (number_1 * number_2))
-        case "/": boolean = (result == round(number_1 / number_2, 2))
+        case "/": boolean = (result == round(number_1 / number_2, 2)) # Redondeo a 2 decimales
 
     if (boolean):
         correctas += 1
