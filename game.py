@@ -24,7 +24,7 @@ for i in range(0, times):
 # Se imprime la cuenta.
     print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
 # Le pedimos al usuario el resultado
-    result = float(input("resultado: ")) # Use float en vez de int para que tome todos los decimales al ingresar el resultado y que no trunque como si fuera un entero
+    result = float(input("resultado(si el resultado no es entero, escriba hasta 2 decimales): ")) # Use float en vez de int para que tome todos los decimales al ingresar el resultado y que no trunque como si fuera un entero
     match operator:
         case "+": boolean = (result == (number_1 + number_2))
         case "-": boolean = (result == (number_1 - number_2))
